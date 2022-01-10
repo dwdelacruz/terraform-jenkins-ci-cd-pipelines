@@ -6,3 +6,5 @@ data "aws_subnet" "sub2" {
   id = var.SNETTA-PUBLIC-2
 }
 
+
+
