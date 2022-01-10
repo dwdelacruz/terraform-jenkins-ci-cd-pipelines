@@ -16,15 +16,7 @@ pipeline {
     }
     stage('terraform init') { 
         steps { 
-<<<<<<< HEAD
-<<<<<<< HEAD
             sh './terraformw init'
-=======
-            sh './terraform init'
->>>>>>> Adding New Resources to the enviroment
-=======
-            sh './terraformw init'
->>>>>>> Adding Content to the repo
         }
     }
     stage('terraform') {
