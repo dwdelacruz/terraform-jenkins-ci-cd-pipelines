@@ -14,7 +14,7 @@ pipeline {
         checkout scm
       }
     }
-    stage('terraform') { 
+    stage('terraform init') { 
         steps { 
             sh './terraformw init -auto-approve'
         }
