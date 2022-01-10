@@ -5,3 +5,4 @@ data "aws_subnet" "sub1" {
 data "aws_subnet" "sub2" {
   id = var.SNETTA-PUBLIC-2
 }
+
