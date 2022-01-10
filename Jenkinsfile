@@ -16,12 +16,16 @@ pipeline {
     }
     stage('terraform init') { 
         steps { 
+<<<<<<< HEAD
             sh './terraformw init'
+=======
+            sh './terraform init'
+>>>>>>> Adding New Resources to the enviroment
         }
     }
     stage('terraform') {
       steps {
-        sh './terraformw apply -auto-approve -no-color'
+        sh './terraform apply -auto-approve -no-color'
       }
     }
   }
