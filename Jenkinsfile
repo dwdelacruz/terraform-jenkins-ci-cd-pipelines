@@ -16,7 +16,7 @@ pipeline {
     }
     stage('terraform init') { 
         steps { 
-            sh './terraformw init -auto-approve'
+            sh './terraformw init'
         }
     }
     stage('terraform') {
