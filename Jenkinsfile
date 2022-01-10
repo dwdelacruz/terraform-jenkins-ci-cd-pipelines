@@ -16,12 +16,12 @@ pipeline {
     }
     stage('terraform init') { 
         steps { 
-            sh './terraform init'
+            sh './terraformw init'
         }
     }
     stage('terraform') {
       steps {
-        sh './terraform apply -auto-approve -no-color'
+        sh './terraformw apply -auto-approve -no-color'
       }
     }
   }
