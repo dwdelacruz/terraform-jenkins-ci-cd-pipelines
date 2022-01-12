@@ -1,6 +1,6 @@
 resource "aws_instance" "simple-servers" {
   ami                         = var.ami
-  subnet_id                   = data.aws_subnet.sub1.id
+  subnet_id                   = var.SNETTA-PUBLIC-1.id
   instance_type               = "t2.medium"
   associate_public_ip_address = true
   security_groups             = var.main_security_group
