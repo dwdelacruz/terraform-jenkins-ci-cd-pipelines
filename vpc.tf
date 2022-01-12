@@ -1,3 +1,3 @@
-data "aws_vpc" "main1" {
-  id = var.snetta-vpc-id
-}
+#data "aws_vpc" "main1" {
+#  id = var.snetta-vpc-id
+#}
