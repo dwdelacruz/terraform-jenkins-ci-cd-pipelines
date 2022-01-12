@@ -24,6 +24,14 @@ pipeline {
         sh './terraformw apply -no-color'
       }
     }
+    
+    stage('hello AWS') {
+      steps {
+         withAWS(credentials: 'Jenkins-Terrafrom-POC-Role', region: 'us-east-1') {
+             sh 'echo "it works" '
+                }
+            }
+        }
   }
   post {
     always {
