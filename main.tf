@@ -14,14 +14,14 @@ resource "aws_subnet" "sub1"{
   }
 }
 
-#resource "aws_instance" "simple-servers" {
-#  ami                         = var.ami
-#  subnet_id                   = aws_subnet.sub1.id
-#  instance_type               = "t2.medium"
-#  associate_public_ip_address = true
-  #security_groups             = var.sec_groups
-#  key_name                    = "Terra"
-#  tags = {
-#    Name = "SNETTA-ec2-terraform-poc-kubectl-master-controller"
-    #
-#  }
+resource "aws_instance" "simple-servers" {
+  ami                         = var.ami
+  subnet_id                   = aws_subnet.sub1.id
+  instance_type               = "t2.medium"
+  associate_public_ip_address = true
+  security_groups             = var.sec_groups
+  key_name                    = "Terra"
+  tags = {
+    Name = "SNETTA-ec2-terraform-poc-kubectl-master-controller"
+  }
+}
