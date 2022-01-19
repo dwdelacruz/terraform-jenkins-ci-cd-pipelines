@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'linux'}
   tools { 
-    terraform 'ddelacruz-aws-cred' 
+    terraform 'terraform-poc-path' 
   }
    stage('terraform init') { 
         steps { 
