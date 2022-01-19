@@ -1,20 +1,9 @@
 pipeline {
   agent { label 'linux'}
-  options {
-    skipDefaultCheckout(true)
+  tools { 
+    terraform 'ddelacruz-aws-cred' 
   }
-  stages{
-    stage('clean workspace') {
-      steps {
-        cleanWs()
-      }
-    }
-    stage('checkout') {
-      steps {
-        checkout scm
-      }
-    }
-    stage('terraform init') { 
+   stage('terraform init') { 
         steps { 
             sh './terraformw init'
         }
@@ -25,9 +14,3 @@ pipeline {
       }
     }
   }
-  post {
-    always {
-      cleanWs()
-    }
-  }
-}
